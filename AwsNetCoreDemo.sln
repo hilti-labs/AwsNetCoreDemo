@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsNetCoreDemo", "AwsNetCoreDemo\AwsNetCoreDemo.csproj", "{7316CB55-87C3-463F-9C38-F758EA854CF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7316CB55-87C3-463F-9C38-F758EA854CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7316CB55-87C3-463F-9C38-F758EA854CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7316CB55-87C3-463F-9C38-F758EA854CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7316CB55-87C3-463F-9C38-F758EA854CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74F9C40A-1635-4ED4-8417-47EF77A2CE03}
+	EndGlobalSection
+EndGlobal
