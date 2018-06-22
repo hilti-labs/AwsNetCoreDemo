@@ -1,12 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿@inherits Microsoft.VisualStudio.Web.CodeGeneration.Templating.RazorTemplateBase
+using Microsoft.AspNetCore.Mvc;
 
-namespace AwsNetCoreDemo.Controllers
+@{string modelName = (Model.ClassName.EndsWith("Controller") ? Model.ClassName.Substring(0, Model.ClassName.Length - 10) : Model.ClassName);}
+namespace @Model.NamespaceName
 {
+@{
+    string routePrefix = "api/" + modelName;
+}
     [Produces("application/json")]
-    [Route("api/Values")]
-    public class ValuesController : Controller
+    [Route("@routePrefix")]
+    public class @Model.ClassName : Controller
     {
-        // GET: api/Values
+        // GET: api/@modelName
         [HttpGet]
         public IActionResult Get()
         {
@@ -14,7 +19,7 @@ namespace AwsNetCoreDemo.Controllers
             return Ok(result);
         }
 
-        // GET: api/Values/5
+        // GET: api/@modelName/5
         [HttpGet("{id}", Name = "Get")]
         public IActionResult Get(int id)
         {
@@ -22,14 +27,14 @@ namespace AwsNetCoreDemo.Controllers
             return Ok(result);
         }
         
-        // POST: api/Values
+        // POST: api/@modelName
         [HttpPost]
         public IActionResult Post([FromBody]string value)
         {
             return CreatedAtAction(nameof(Get), new { id = 5 }, value);
         }
         
-        // PUT: api/Values/5
+        // PUT: api/@modelName/5
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody]string value)
         {
